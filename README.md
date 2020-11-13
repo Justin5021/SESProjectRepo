@@ -1,4 +1,5 @@
 # Software Engineering Studio 1A - TeleHealth (Group 2)
+## This is a duplicated repository of https://github.com/JacobRochecouste/SESProjectRepo for me to experiment on
 ## **Please Download XAMPP and Node.JS**
 - **Installation instructions can be found in the User Manual if you do not know how to**
 - **The website is currently in release v1.0.0 and the User Manual is in v1.0**
