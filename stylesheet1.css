@@ -24,15 +24,15 @@ title {
 
 body, html {
 	font-family: Arial;
-	margin: 0px 0px 0px 0px;
+	margin: 0px;
 	height: 100%;
 }
 
 .logoDiv {
-	width: 100px; 
-	float:left; 
-	height:200px; 
-	margin:10px
+	width: 100px;
+	float: left;
+	height: 200px;
+	margin: 10px;
 }
 
 .navBar {
@@ -51,7 +51,6 @@ body, html {
 	padding: 14px 16px;
 	text-decoration: none;
 	font-size: 17px;
-	text-decoration: underline;
 }
 
 .navBar a:hover {
@@ -72,8 +71,8 @@ body, html {
 	display: block;
 	font-size: 26px;
 	padding: 10px 40px;
-	height: 28px; 
-	border: none; 
+	height: 28px;
+	border: none;
 	text-decoration: none;
 }
 
@@ -126,22 +125,12 @@ body, html {
 
 /*Background Image for Website *Temporary**/
 .parallax {
-	background-image: url('Landing Background.jpg');
+	background-image: url('img/Landing Background.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 110%;
-	width: 100%;
-}
-
-.parallaxDoc {
-	background-image: url('Landing Background.jpg');
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 89.2%;
 	width: 100%;
 }
 
@@ -352,7 +341,7 @@ span {
 
 /*Currently used as the body class style for Login and SignUp pages*/
 .loginStyle {
-	background-image: url('Landing Background.jpg');
+	background-image: url('img/Landing Background.jpg');
 	height: 100%;
 	/* Center and scale the image nicely */
 	background-position: center;
@@ -897,83 +886,6 @@ hr {
 	font-size: 18px;
 }
 
-.container1 {
-  width: 400px; 
-  float:left; 
-  height:400px; 
-  margin:10px;
-  max-width: 400px;
-}
-
-.container1 img {
-  width: 100%;
-  height: auto;
-  -ms-transform: translate(50%, -10%);
-  transform: translate(50%, -10%);
-  width: 100px; 
-  float:left; 
-  margin:10px;
-  border:1px solid black;
-}
-
-.container1 .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: #999999;
-  color: black;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-  transform: translate(-175%, 700%);
-
-}
-
-.container1 .btn:hover {
-  background-color: #e0e0e0;
-  color: black
-}
-
-.container2 {
-  width: 400px; 
-  float:left; 
-  height:400px; 
-  max-width: 400px;
-}
-
-.container2 img {
-  width: 100%;
-  height: 400px;
-  transform: translate(130%, 2%);
-  width: 100px; 
-  float:left; 
-  margin:10px;
-  border:1px solid black;
-}
-
-.container2 .btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  background-color: #999999;
-  color: black;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-  transform: translate(195%, 700%);
-}
-
-.container2 .btn:hover {
-  background-color: #e0e0e0;
-  color: black;
-}
-
 /* Table View in PatientViewSubscription Page*/
 #viewPatientSubscriptions {
 	margin: auto;
@@ -1185,8 +1097,7 @@ select.form-control {
 	width: 1000px;
 	height: 60px;
 	overflow: hidden;
-	box-shadow: 5px 10px #bababa7;
-	/* I'm assuming its supposed to be #bababa without the 7 and also maybe 3px 6px looks better than 5 10*/
+	/* box-shadow: 5px 10px #bababa; */
 	border-radius: 4px;
 	background-color: #404040;
 	border: 2px solid #ff9900;
