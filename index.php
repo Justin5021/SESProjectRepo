@@ -6,35 +6,40 @@ session_start();
 <html lang="en">
 
 	<head>
-		<meta>
-		<link rel="stylesheet" type="text/css" href="stylesheet1.css">
-		<link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
 		<title>TeleHealth</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
 	</head>
 
 	<body>
-
 		<!-- Navigation Menu -->
-		<div class="navBar">
-			<a id="homeLink" class="active" href="LandingPage.php">Home</a>
-			<a id="aboutLink" href="AboutPage.php">About</a>
-			<a id="servicesLink" href="ServicesPage.php">Services</a>
-			<a id="emergenciesLink" href="EmergenciesPage.php">Emergencies</a>
-			<a id="title" class="title" style="width: 26%; float: middle; margin-left: 295px;"><b>TeleHealth</b></a>
-			<?php
-			if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true)
-			{	
-				echo '<a id="loginLink" href="LoginPage.php" style="float:right">Log In</a>';
-				echo '<a id="signupLink" href="SignupUserTypePage.html" style="float:right">Sign Up</a>';
-			}
-			else
-			{
-				echo '<a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>';
-				echo '<a id="docHome" href="DoctorHome.php" style="float: right;">', $_SESSION["FName"]," ",$_SESSION["LName"], '</a>';
-			}
-			?>
-
-		</div>
+		<nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"> </i>
+			</label>
+			<label class="title"> TeleHealth </label>
+			<ul>
+				<li><a class="active" href="index.php">Home</a></li>
+				<li><a href="AboutPage.php">About</a></li>
+				<li><a href="EmergenciesPage.php">Emergencies</a></li>
+				<?php
+				if(!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true)
+				{	
+					echo '<li><a href="LoginPage.php">Log In</a></li>';
+					echo '<li><a href="SignupUserTypePage.html">Sign Up</a></li>';
+				}
+				else
+				{
+					echo '<li><a href="DoctorHome.php">', $_SESSION["FName"]," ",$_SESSION["LName"], '</a></li>';
+					echo '<li><a href="LogoutHandler.php">Log Out</a></li>';
+				}
+				?>
+			</ul>
+		</nav>
 
 		<!--Content of Page-->
 		<div class="parallax">
@@ -64,10 +69,11 @@ session_start();
 
 		<!-- Footer Menu -->
 		<div class="footerBar">
-			<a id="FAQLink" href="FAQPage.php">FAQ</a>
-			<a id="contactLink" href="ContactPage.php">Contact Us</a>
-			<a id="creditLink" href="CreditPage.php">Credits</a>
-			<a style="float:right" class="copyRight"> &copy; 2020 TeleHealth </a>
+			<a href="FAQPage.php">FAQ</a>
+			<a href="ContactPage.php">Contact Us</a>
+			<a href="ServicesPage.php">Services</a>
+			<a href="CreditPage.php">Credits</a>
+			<a class="copyRight"> &copy; 2020 TeleHealth </a>
 		</div> 
 
 	</body>

@@ -1,9 +1,13 @@
 ﻿* {
-	font-family: Arial;
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
 }
 
 title {
-	font-family: Arial;
 	font-size: 70px;
 	text-align: center;
 	padding-bottom: 120px;
@@ -11,70 +15,132 @@ title {
 	color: rgb(65, 63, 63);
 }
 
-.title2 {
-	font-family: Arial;
-	font-size: 70px;
-	text-align: center;
-	padding: 70px;
-	margin: 0px 0px 0px -20px;
-	padding-bottom: 80px;
-	background-color: #e0e0e0;
-	color: rgb(65, 63, 63);
-}
-
 body, html {
-	font-family: Arial;
 	margin: 0px;
 	height: 100%;
 }
 
 .logoDiv {
-	width: 100px;
 	float: left;
 	height: 200px;
-	margin: 10px;
+	padding: 15px 15px;
 }
 
-.navBar {
-	background-color: #333;
-	overflow: hidden;
+/**************
+	Nav Bar
+**************/
+
+nav {
+	background: #333;
+	height: 50px;
 	width: 100%;
-	position: -webkit-sticky;
-	position: sticky;
-	font: Arial;
+	position: -webkit-sticky; /* add these two lines to get it to be sticky instead of it scrolling past*/
+	position: fixed; /* also it must be in the nav tag as the nav is the parent of every child here */
 }
 
-.navBar a {
-	float: left;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
+nav label.title {
+	color: white;
+	font-size: 35px;
+	line-height: 50px;
+	padding: 0 50px;
+	font-weight: bold;
+}
+
+nav ul {
+	float: right;
+	margin-right: 10px;
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 50px;
+	margin: 0 5px;
+}
+
+nav ul li a {
+	color: white;
+	text-transform: uppercase;
 	font-size: 17px;
+	font-weight: bold;
+	padding: 7px 13px;
+	border-radius: 3px;
 }
 
-.navBar a:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-.navBar a.active {
+a.active {
 	background-color: #FF6341;
 	color: white;
 }
 
-.navBar a.title {
-	background-color: #333;
-	color: white;
-	margin: 0 auto;
-	width: 10%;
-	display: block;
-	font-size: 26px;
-	padding: 10px 40px;
-	height: 28px;
-	border: none;
-	text-decoration: none;
+nav a:focus, nav a:hover {
+	background-color: #ddd;
+	color: black;
+	transition: .2s;
 }
+
+.checkbtn {
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 50px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+
+#check {
+	display: none;	
+}
+
+@media (max-width: 952px) {
+	nav label.title {
+		font-size: 30px;
+		padding-left: 50px; 
+	}
+
+	nav ul li a {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 858px) {
+	.checkbtn {
+		display: block;
+	}
+	
+	ul {
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #2c3e50;
+		top: 50px;
+		left: -100%;
+		text-align: center;
+		transition: all .5s;
+	}
+
+	nav ul li {
+		display: block;
+		margin: 50px 0;
+		line-height: 30px;
+	}
+
+	nav ul li a {
+		font-size: 24px;
+	}
+	
+	a:active, a:hover, a:focus {
+		background: none;
+		color: #0082e6;
+	}
+
+	#check:checked ~ ul {
+		left: 0;
+	}
+}
+
+/**************
+	Foo Bar
+**************/
 
 .footerBar {
 	background-color: #333;
@@ -120,7 +186,7 @@ body, html {
 	display: block;
 	float: right;
 	text-align: center;
-	font-size: 14px;
+	font-size: 18px;
 }
 
 /*Background Image for Website *Temporary**/
@@ -140,15 +206,9 @@ body, html {
     float: left;
 }
 
-.divText {
-	width: 90%;
-	height: 60%;
-	font-size: 26px;
-	background-color: #e0e0e0;
-	padding: 15px;
-	border: 4px solid #b05858;
-	margin: 0px 0px 0px 70px;
-}
+/**************
+   Main Pages
+**************/
 
 .mpForm {
 	width: 50%;
@@ -164,7 +224,6 @@ body, html {
 	font-size: 52px;
 	margin-left: 150px;
 }
-
 
 .mpForm #mpText {
 	font-size: 24px;
@@ -242,11 +301,11 @@ body, html {
 
 /*Login Page Form Style*/
 .loginPage {
-	width: 300px;
-	height: 255px;
+	width: 20%;
+	height: 30%;
 	overflow: hidden;
 	margin: auto;
-	padding: 50px;
+	padding: 10px 40px;
 	background: #e0e0e0;
 	border-radius: 10px;
 	text-align: left;
@@ -283,7 +342,7 @@ h3 {
 
 /*Login Page Username Text*/
 #Uname {
-	width: 300px;
+	width: 100%;
 	height: 30px;
 	border: border-box;
 	border-radius: 3px;
@@ -292,7 +351,7 @@ h3 {
 
 /*Login Page Password Text*/
 #Pass {
-	width: 300px;
+	width: 100%;
 	height: 30px;
 	border: border-box;
 	border-radius: 3px;
@@ -413,8 +472,6 @@ span {
 	color: white;
 }
 
-
-
 /*Default Button Style Declaration*/
 .button {
 	border: none;
@@ -461,7 +518,7 @@ span {
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
 	border-radius: 15px;
-	width: 313px;
+	width: 100%;
 	height: 30px;
 }
 
@@ -902,7 +959,6 @@ hr {
 }
 
 .viewPatientSubscriptions table {
-	font-family: Arial;
 	border-collapse: collapse;
 	border: 1px solid black;
 	width: 100%;
@@ -956,7 +1012,6 @@ select.form-control {
 }
 
 .drugsList table {
-	font-family: Arial;
 	border-collapse: collapse;
 	border: 1px solid black;
 	width: 100%;
@@ -1077,27 +1132,21 @@ select.form-control {
 	font-size: 18px;
 }
 
-.buttonForm {
-	width: 1000px;
+.docHomeButtons {
+	width: 50%;
 	height: auto;
-	overflow: hidden;
 	margin: auto;
 	padding: 15px;
-	text-align: left;
 	border: 4px solid rgba(0,0,0,0.24);
+	border-radius: 3px;
 	background: #e0e0e0;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-.docHomeButtons {
-	
-}
-
 .docHomeButtons button {
-	width: 1000px;
+	width: 100%;
 	height: 60px;
 	overflow: hidden;
-	/* box-shadow: 5px 10px #bababa; */
 	border-radius: 4px;
 	background-color: #404040;
 	border: 2px solid #ff9900;
@@ -1112,11 +1161,18 @@ select.form-control {
 }
 
 .patHomeButtons {
-
+	width: 50%;
+	height: auto;
+	margin: auto;
+	padding: 15px;
+	border: 4px solid rgba(0,0,0,0.24);
+	border-radius: 3px;
+	background: #e0e0e0;
+	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .patHomeButtons button {
-	width: 1000px;
+	width: 100%;
 	height: 60px;
 	overflow: hidden;
 	border-radius: 4px;
@@ -1388,13 +1444,6 @@ iframe {
 	display: block;
 	margin: 0 auto;
 }
-
-/*just paste this code into a div and it centers every object inside to the center*/
-/*.containerCenter {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}*/
 
 .patEdit {
 	width: 750px;

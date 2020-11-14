@@ -11,17 +11,18 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 ?>
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 	
 	<head>
-		<meta>
+		<meta >
 		<link rel="stylesheet" type="text/css" href="stylesheet1.css">
 		<link rel="icon" type="image/x-icon" href="favicon.ico"/>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Home</title>
 	</head>
 
 	<body>
-	
 		<!-- Navigation Menu -->
 		<div class="navBar">
 			<a id="homeLink" href="LandingPage.php">Home</a>
@@ -38,24 +39,18 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "doctor"){
 			<br><br><br> 
 			<h1>Welcome Dr. <?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?>!</h1>
 			<h3>What would you like to do?</h3>
-			<br>
-			
-			<div class="buttonForm" align="center">
-			<br>
-				<div class="docHomeButtons" align="center">
-					<button class="button" onclick="window.open('https://my.setmore.com/calendar#weekly/r88971600744316499/05102020', '_blank'); return false;">View the Setmore Booking Page</button>
-					<br><br><br>
-					<button class="button" onclick="location.href='DoctorCreateSubscription.php'">Create a Subscription</button>
-					<br><br><br>
-					<button class="button" onclick="location.href='DoctorViewDrugsList.php'" target="_blank">View the Drug Inventory</button>
-					<br><br><br>
-					<button class="button" onclick="window.open('http://localhost:3000/', '_blank'); return false;">Start a Chat with a Patient</button>
-					<br><br><br>
-					<button class="button" onclick="location.href='UserSettingPage-Doctor.php'">Change Account Settings</button>
-				</div>
-			<br>
+			<br><br>
+			<div class="docHomeButtons" align="center">
+				<button class="button" onclick="window.open('https://my.setmore.com/calendar#weekly/r88971600744316499/05102020', '_blank'); return false;">View the Setmore Booking Page</button>
+				<br><br><br>
+				<button class="button" onclick="location.href='DoctorCreateSubscription.php'">Create a Subscription</button>
+				<br><br><br>
+				<button class="button" onclick="location.href='DoctorViewDrugsList.php'" target="_blank">View the Drug Inventory</button>
+				<br><br><br>
+				<button class="button" onclick="window.open('http://localhost:3000/', '_blank'); return false;">Start a Chat with a Patient</button>
+				<br><br><br>
+				<button class="button" onclick="location.href='UserSettingPage-Doctor.php'">Change Account Settings</button>
 			</div>
-				<!-- can use either white or orange text for the placeholder text i dont mind either I quite like the orange, the white is a little off, up to you though.-->
 		</div>
 
 		<!-- Footer Menu -->
