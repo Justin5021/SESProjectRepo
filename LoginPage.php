@@ -3,36 +3,35 @@ session_start();
 ?>
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 
     <head>
-        <meta>
-        <link rel="stylesheet" type="text/css" href="stylesheet1.css">
-        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-        <title> User Login </title>
-    </head>
+		<title>Login</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+	</head>
     
     <body class="loginStyle">
         
         <!--Logo--> 
         <span class="logoDiv">
-            <a id="homePage" href="LandingPage.php">
-                <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+            <a id="homePage" href="index.php">
+                <img src="img/TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
             </a>
         </span>
 
-        <br><br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
-
         <!--Content of Page-->
         <div class="loginPage">
-            <form id="loginForm" method="get" action="LoginHandler.php">
-                <label id="loginFormLbl"><b> Email Address: </b><br></label>
+            <form class="loginForm" method="get" action="LoginHandler.php">
+                <label id="loginFormLbl"><b> Email Address: </b></label>
+                <br>
                 <input type="email" name="Uname" id='Uname' placeholder="Email Address" required>
                 <br><br>
-                <label id="loginFormLbl"><b> Password: </b><br></label>
+                <label id="loginFormLbl"><b> Password: </b></label>
+                <br>
                 <input type="Password" name="Pass" id="Pass" placeholder="Password" required>
                 <br><br>
                 <?php 
@@ -45,9 +44,9 @@ session_start();
                 <button type="submit" class="buttonLog logInBtn"> Log In </button>
                 <br><br>
                 <input type="checkbox" id="cbox">
-                <span>Remember Me</span>
+                <label class="loginTxt">Remember Me</label>
                 <br><br>
-                Forgotten your Password? Click <a href="ResetPasswordPage.php">here</a>!
+                <label class="loginTxt">Forgotten your Password? Click <a href="ResetPasswordPage.php">here</a>!</label>
             </form>
         </div>
 		<!-- Footer Menu -->

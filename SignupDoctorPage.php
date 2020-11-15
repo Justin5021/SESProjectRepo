@@ -1,21 +1,23 @@
-﻿<?php 
+﻿<?php
 session_start();
 ?>
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
     
     <head>
-        <meta>
-        <link rel="stylesheet" type="text/css" href="stylesheet1.css">
-        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-        <title>Sign Up</title>
-    </head>
+		<title>Sign Up</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+	</head>
 
     <body class="loginStyle">
         <span class="logoDiv">
-            <a id="homePage" href="LandingPage.php">
-                <img src="TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
+            <a id="homePage" href="index.php">
+                <img src="img/TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
             </a>
         </span>
 
@@ -56,8 +58,7 @@ session_start();
                 <label id="signUpFormLbl"> <b> Confirm Password: </b><br> </label>
                 <input type="password" name="Confirm" id="Confirm" placeholder="Confirm Password" required>
                 <br><br>
-
-                <input type="submit" name="signUp" class="buttonRounded signUpBtn" value="Sign Up" onclick="return passValidate()" />
+                <button class="buttonRounded signUpBtn" type="submit" onclick="return passValidate()"> Submit </button> </td>
             </form>
         </div>
         

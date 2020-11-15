@@ -25,7 +25,7 @@ $report = mysqli_fetch_array($query);
 //Page Setup
 $pdf = new FPDF('P', 'mm', 'A4');
 $pdf->AddPage();	
-$pdf->Image('TeleHealth_Logo.png',180,15,15,15);
+$pdf->Image('img/TeleHealth_Logo.png',180,15,15,15);
 
 // Form ID
 $pdf->SetFont('Arial','B',30);
