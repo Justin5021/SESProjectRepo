@@ -34,8 +34,8 @@ if(!isset($_SESSION["UserType"]) || $_SESSION["UserType"] !== "patient"){
 				<li><a href="index.php">Home</a></li>
 				<li><a href="AboutPage.php">About</a></li>
 				<li><a href="EmergenciesPage.php">Emergencies</a></li>
-                <li><a id="patHome" class="active" href="PatientHome.php"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a></li>
-		        <li><a id="logoutLink" href="LogoutHandler.php">Log Out</a></li>
+                <li><a class="active" href="PatientHome.php"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a></li>
+		        <li><a href="LogoutHandler.php">Log Out</a></li>
             </ul>
         </nav>
 

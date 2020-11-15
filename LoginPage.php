@@ -23,18 +23,15 @@ session_start();
             </a>
         </span>
 
-        <br><br><br><br>
-        <br><br><br><br>
-        <br><br><br>
-        <br><br><br>
-
         <!--Content of Page-->
         <div class="loginPage">
-            <form id="loginForm" method="get" action="LoginHandler.php">
-                <label id="loginFormLbl"><b> Email Address: </b><br></label>
+            <form class="loginForm" method="get" action="LoginHandler.php">
+                <label id="loginFormLbl"><b> Email Address: </b></label>
+                <br>
                 <input type="email" name="Uname" id='Uname' placeholder="Email Address" required>
                 <br><br>
-                <label id="loginFormLbl"><b> Password: </b><br></label>
+                <label id="loginFormLbl"><b> Password: </b></label>
+                <br>
                 <input type="Password" name="Pass" id="Pass" placeholder="Password" required>
                 <br><br>
                 <?php 
@@ -47,9 +44,9 @@ session_start();
                 <button type="submit" class="buttonLog logInBtn"> Log In </button>
                 <br><br>
                 <input type="checkbox" id="cbox">
-                <span>Remember Me</span>
+                <label class="loginTxt">Remember Me</label>
                 <br><br>
-                Forgotten your Password? Click <a href="ResetPasswordPage.php">here</a>!
+                <label class="loginTxt">Forgotten your Password? Click <a href="ResetPasswordPage.php">here</a>!</label>
             </form>
         </div>
 		<!-- Footer Menu -->

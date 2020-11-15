@@ -4,7 +4,6 @@
 	margin: 0;
 	text-decoration: none;
 	list-style: none;
-	box-sizing: border-box;
 }
 
 title {
@@ -196,7 +195,7 @@ nav a:focus, nav a:hover {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 110%;
+	height: 100%;
 	width: 100%;
 }
 
@@ -301,15 +300,16 @@ nav a:focus, nav a:hover {
 
 /*Login Page Form Style*/
 .loginPage {
-	width: 20%;
-	height: 30%;
-	overflow: hidden;
-	margin: auto;
-	padding: 10px 40px;
+	width: 350px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 25px;
+	transform: translate(-50%, -50%);
 	background: #e0e0e0;
-	border-radius: 10px;
-	text-align: left;
-	border: 4px solid #333333;
+	border: 3px solid black;
+	overflow: hidden;
+	border-radius: 7px;
 }
 
 h1 {
@@ -363,6 +363,11 @@ h3 {
 	color: white;
 	background-color: #4CAF50;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+	cursor: pointer;
+}
+
+.loginForm .loginTxt {
+	font-size: 16px;
 }
 
 #errorLogin {
@@ -411,24 +416,28 @@ span {
 /*this is the form style for the SignupUserType page*/
 .signUpUserType {
 	width: 300px;
-	height: auto;
-	overflow: hidden;
-	margin: auto;
-	padding: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 25px;
+	transform: translate(-50%, -50%);
 	background: #e0e0e0;
-	border-radius: 10px;
-	border: 4px solid #333333;
+	border: 3px solid black;
+	overflow: hidden;
+	border-radius: 7px;
 }
 
 .signUp {
-	width: 300px;
-	height: auto;
-	margin: auto;
-	padding: 20px 40px;
+	width: 350px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 25px;
+	transform: translate(-50%, -50%);
 	background: #e0e0e0;
-	border-radius: 10px;
-	text-align: left;
-	border: 4px solid #333333;
+	border: 3px solid black;
+	overflow: hidden;
+	border-radius: 7px;
 }
 
 #signUpTitle {
@@ -541,13 +550,14 @@ span {
 /*this is the form style for the ResetPassword page*/
 .resetPassword {
 	width: 450px;
-	height: auto;
-	overflow: hidden;
-	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	padding: 15px;
+	transform: translate(-50%, -50%);
 	background: #e0e0e0;
-	border: 4px solid black;
-	border-radius: 10px;
+	border: 3px solid black;
+	border-radius: 8px;
 }
 
 /*Password Page H2 Text Style*/
@@ -610,13 +620,14 @@ span {
 
 .changePassword {
 	width: 450px;
-	height: auto;
-	overflow: hidden;
-	margin: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	padding: 15px;
-	background: #ffffff;
-	border: 4px solid black;
-	border-radius: 10px;
+	transform: translate(-50%, -50%);
+	background: #e0e0e0;
+	border: 3px solid black;
+	border-radius: 8px;
 }
 
 /*Password Page H2 Text Style*/
@@ -902,12 +913,15 @@ hr {
 /*Sign Up Success and Fail Pages*/
 .signUpStatusS {
 	width: 550px;
-	height: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 25px;
+	transform: translate(-50%, -50%);
+	background: #e0e0e0;
+	border: 3px solid black;
 	overflow: hidden;
-	margin: auto;
-	padding: 45px;
-	background: white;
-	border: 4px solid rgba(0,0,0,0.24);
+	border-radius: 7px;
 }
 
 .signUpStatusF {

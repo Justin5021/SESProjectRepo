@@ -18,29 +18,35 @@ $result = mysqli_query($dbc, $query);
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
-        <meta>
-        <link rel="stylesheet" type="text/css" href="stylesheet1.css">
-        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-        <title> View Subscription </title>
-    </head>
+<head>
+		<title>Reports</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+	</head>
 
-    <body>
-
-        <!-- Navigation Menu -->
-        <div class="navBar">
-		    <a id="homeLink" href="LandingPage.php">Home</a>
-		    <a id="aboutLink" href="AboutPage.php" >About</a>
-	    	<a id="servicesLink" href="ServicesPage.php" >Services</a>
-		    <a id="emergenciesLink" href="EmergenciesPage.php" >Emergencies</a>
-		    <a id="title" class="title" style="width: 26%; float: middle; margin-left: 295px;"><b>TeleHealth</b></a>
-		    <a id="logoutLink" href="LogoutHandler.php" style="float:right">Log Out</a>
-    		<a id="patHome" href="PatientHome.php" style="float: right;"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a>
-    	</div>
+	<body>
+		<!-- Navigation Menu -->
+        <nav>
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn">
+				<i class="fas fa-bars"> </i>
+			</label>
+			<label class="title"> TeleHealth </label>
+			<ul>
+				<li><a href="index.php">Home</a></li>
+				<li><a href="AboutPage.php">About</a></li>
+				<li><a href="EmergenciesPage.php">Emergencies</a></li>
+                <li><a class="active" href="PatientHome.php"><?php echo $_SESSION["FName"]," ",$_SESSION["LName"];?></a></li>
+		        <li><a href="LogoutHandler.php">Log Out</a></li>
+            </ul>
+        </nav>
 
         <!--Content of Page-->
         <div class="viewPatientSubscriptions" id="viewPatientSubscriptions" align="center">
-			<br>
+			<br><br><br><br>
             <table align="center">
                 <tr>
                     <th colspan="5"><label for="viewSubTitle" id="viewSubTitle"><h2><b> Medical Subscriptions </b></h2></label></th>

@@ -3,28 +3,25 @@ session_start();
 ?>
 <!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 
     <head>
-        <meta>
-        <link rel="stylesheet" type="text/css" href="stylesheet1.css">
-        <link rel="icon" type="image/x-icon" href="favicon.ico"/>
-        <title> Password Reset </title>
-    </head>
+		<title>Forgot Password</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		<link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+	</head>
 
     <body class="loginStyle">
 
         <!--Logo-->
         <span class="logoDiv">
-            <a id="homePage" href="LandingPage.php">
+            <a id="homePage" href="index.php">
                 <img src="img/TeleHealth_logo.png" alt="TeleHealth Logo" style="width:150px;height:150px;">
             </a>
         </span>
-
-        <br><br><br><br>
-        <br><br><br>
-        <br><br><br>
-        <br><br><br>
 
         <div class="resetPassword">
             <form class="resetForm" method="get" action="ResetPasswordPage-Handler.php">
